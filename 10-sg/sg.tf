@@ -1,5 +1,5 @@
 module "mysql_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "mysql"
@@ -9,7 +9,7 @@ module "mysql_sg" {
 }
 
 module "backend_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "backend"
@@ -19,7 +19,7 @@ module "backend_sg" {
 }
 
 module "frontend_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "frontend"
@@ -29,7 +29,7 @@ module "frontend_sg" {
 }
 
 module "bastion_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "bastion"
@@ -40,7 +40,7 @@ module "bastion_sg" {
 
 # ports 22, 443, 1194, 943 --> VPN ports
 module "vpn_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "vpn"
@@ -50,7 +50,7 @@ module "vpn_sg" {
 }
 
 module "app_alb_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "app-alb"
@@ -60,7 +60,7 @@ module "app_alb_sg" {
 }
 
 module "web_alb_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/kancharlaajay/securitygroup-terraform-aws-module.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "web-alb"

@@ -20,7 +20,7 @@ resource "aws_db_subnet_group" "expense" {
   tags = merge(
     var.common_tags,
     {
-        Name = "${var.project_name}-${var.environment}"
+      Name = "${var.project_name}-${var.environment}"
     }
   )
 }
